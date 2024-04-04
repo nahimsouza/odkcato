@@ -1,0 +1,29 @@
+{
+  "graphs" : [ {
+    "id" : "http://purl.obolibrary.org/obo/odkcato/odkcato-base.json",
+    "meta" : {
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/type",
+        "val" : "http://purl.obolibrary.org/obo/IAO_8000001"
+      }, {
+        "pred" : "http://purl.org/dc/terms/description",
+        "val" : "None"
+      }, {
+        "pred" : "http://purl.org/dc/terms/license",
+        "val" : "https://creativecommons.org/licenses/unspecified"
+      }, {
+        "pred" : "http://purl.org/dc/terms/title",
+        "val" : "Cat Anatomy Ontology"
+      }, {
+        "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
+        "val" : "2024-04-04"
+      } ],
+      "version" : "http://purl.obolibrary.org/obo/odkcato/releases/2024-04-04/odkcato-base.json"
+    },
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/ODKCATO_0000000",
+      "lbl" : "root node",
+      "type" : "CLASS"
+    } ]
+  } ]
+}
