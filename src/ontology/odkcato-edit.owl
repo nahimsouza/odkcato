@@ -44,7 +44,7 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 
 # Class: <http://purl.obolibrary.org/obo/ODKCATO_0000000> (root node)
 
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/ODKCATO_0000000> "2024-04-04T15:25:11Z")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#creation_date> <http://purl.obolibrary.org/obo/ODKCATO_0000000> "2024-04-04T15:25:11Z"^^xsd:dateTime)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/ODKCATO_0000000> "root node"@en)
 
 
