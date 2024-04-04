@@ -1,0 +1,10 @@
+prefix oio: <http://www.geneontology.org/formats/oboInOwl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?class ?label WHERE
+{
+  ?class rdfs:label ?label .
+  ?class oio:creation_date ?date .
+  FILTER(DATATYPE(?date) != xsd:dateTime)
+}

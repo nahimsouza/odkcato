@@ -33,10 +33,11 @@ import_group:
 
 # The lines below are commented because report is failing
 
-# robot_java_args: "-Xmx8G"
-# robot_report:
-#   custom_profile: TRUE
-#   use_labels: TRUE
-#   fail_on: ERROR
-#   report_on:
-#     - edit
+robot_java_args: "-Xmx8G"
+robot_report:
+  use_labels: TRUE
+  fail_on: ERROR
+  report_on:
+    - edit
+  custom_sparql_checks:
+    - datetime-type

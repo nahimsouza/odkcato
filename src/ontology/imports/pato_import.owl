@@ -291,6 +291,10 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_yeast> <http:/
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ro/subsets#ro-eco> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
+# Annotation Property: <http://www.geneontology.org/formats/oboInOwl#creation_date> (creation date)
+
+AnnotationAssertion(rdfs:label <http://www.geneontology.org/formats/oboInOwl#creation_date> "creation date")
+
 
 ############################
 #   Object Properties

@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                db477555fe269531d6911cbe23f79615875b568138123c2147701585300aa458
+CONFIG_HASH=                3ba206a88862a2e11318724bf4c6740eb06121a694a0063af822a3589bedacbc
 
 
 # ----------------------------------------
@@ -40,12 +40,12 @@ SCRIPTSDIR=                 ../scripts
 UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            None
+REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              -l true
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =  owldef-self-reference iri-range label-with-iri multiple-replaced_by dc-properties 
-SPARQL_EXPORTS =            basic-report edges xrefs obsoletes synonyms 
+SPARQL_VALIDATION_CHECKS =  datetime-type 
+SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms 
 ODK_VERSION_MAKEFILE =      v1.5
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
@@ -242,10 +242,10 @@ endif
 # ----------------------------------------
 
 $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri $(URIBASE)/ODKCATO_ --base-iri $(URIBASE)/odkcato --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri $(URIBASE)/ODKCATO_ --base-iri $(URIBASE)/odkcato --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 check_for_robot_updates:
 	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
