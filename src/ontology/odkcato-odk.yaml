@@ -1,0 +1,42 @@
+# More details about configuration file at: 
+#   https://oboacademy.github.io/obook/tutorial/setting-up-project-odk/
+
+id: odkcato
+title: "Cat Anatomy Ontology"
+
+# Github config
+
+github_org: nahimsouza
+repo: odkcato
+
+# Pipeline config
+
+release_artefacts:
+  - base
+  - full
+  - simple
+
+primary_release: full
+
+export_formats:
+  - owl
+  - obo
+  - json
+
+# Import config
+
+import_group:
+  products:
+    - id: ro
+    - id: pato
+    - id: omo
+
+# The lines below are commented because report is failing
+
+# robot_java_args: "-Xmx8G"
+# robot_report:
+#   custom_profile: TRUE
+#   use_labels: TRUE
+#   fail_on: ERROR
+#   report_on:
+#     - edit

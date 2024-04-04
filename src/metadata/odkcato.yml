@@ -1,0 +1,28 @@
+# PURL configuration for http://purl.obolibrary.org/obo/odkcato
+
+idspace: ODKCATO
+base_url: /obo/odkcato
+
+products:
+- odkcato.owl: https://raw.githubusercontent.com/nahimsouza/odkcato/main/odkcato.owl
+- odkcato.obo: https://raw.githubusercontent.com/nahimsouza/odkcato/main/odkcato.obo
+
+term_browser: ontobee
+example_terms:
+- ODKCATO_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/nahimsouza/odkcato/v
+
+- prefix: /tracker/
+  replacement: https://github.com/nahimsouza/odkcato/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/ODKCATO?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/nahimsouza/odkcato/main/
+
